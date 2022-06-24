@@ -1,0 +1,34 @@
+.card {
+    border: none;
+    width: 19rem;
+}
+
+.card-img-top {
+    border-radius: 50%;
+}
+
+.card-link , #blog {
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    
+}
+
+i{
+    color:rgb(155, 155, 155);
+}
+
+b{
+    color: black;
+}
+a:hover,#blog:hover{
+    color: dodgerblue;
+}
+
+*{
+    background-color: tr;
+}
+
+
+
+

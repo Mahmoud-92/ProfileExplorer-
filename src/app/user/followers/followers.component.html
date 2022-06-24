@@ -1,0 +1,40 @@
+<div class="followers">
+  <h2><b>Followers</b></h2>
+
+  <div class="list-of-items">
+
+    <div *ngFor="let follower of followersArrayOfObj; let i = index">
+
+      <div class="list-group-item border-bottom border-start mt-4 mb-3">
+        <div class="d-inline-flex row g-0">
+
+          <div class="col-md-4">
+            <img src={{followersArrayOfObj[i].avatar_url}} class="img-fluid ">
+          </div>
+
+          <div class="col-md-8">
+            <div class="card-body">
+
+              <div class="d-inline-flex align-items-baseline">
+                <a (click)="openUserPage(followersArrayOfObj[i].login)"><h4  class="card-title">{{followersArrayOfObj[i].name}}</h4></a>
+                <h7 class="card-title color-muted mx-4">{{followersArrayOfObj[i].login}}</h7>
+              </div>
+
+              <p class="color-muted">{{followersArrayOfObj[i].bio}}</p>
+
+              <div class="card-group ">
+                <p *ngIf="followersArrayOfObj[i].location!=null" class="card-text color-muted"><i class="bi bi-geo-alt-fill"></i><span class="mx-1">{{followersArrayOfObj[i].location}}</span>
+                </p>
+                <p *ngIf="followersArrayOfObj[i].company!=null" class="card-text color-muted mx-5"><i class="bi bi-building"></i><span class="mx-1">{{followersArrayOfObj[i].company}}</span>
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>

@@ -1,0 +1,19 @@
+
+
+<h1 class="d-flex justify-content-center">Profile Explorer Network</h1>
+<div id="homeCard" class="d-flex justify-content-md-center ">
+
+  
+  <div class="col-auto">
+    <!--Two way data binding to catch data from input feild  -->
+    <input type="text" (keydown.enter)="sendLoginName()" [(ngModel)]="login" class="form-control" placeholder="Login...">
+  </div>
+
+  <div class="col-auto">
+    <!-- Event binding to trigger function on click -->
+    <button (click)="sendLoginName()" type="submit" class="btn btn-primary mb-3">Search</button>
+  </div>
+
+</div>
+
+
