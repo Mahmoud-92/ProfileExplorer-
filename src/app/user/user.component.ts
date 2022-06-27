@@ -12,7 +12,7 @@ import { FetchService } from '../fetch.service';
 export class UserComponent implements OnInit {
 
   
-  storedData:object;
+  storedData:any;
 
   localData;
 
