@@ -1,0 +1,29 @@
+
+<div class="list-group-item border-bottom border-start mt-4 mb-3">
+    <div class="d-inline-flex row g-0">
+
+      <div class="col-md-4">
+        <img src={{userObj?.avatar_url}} class="img-fluid ">
+      </div>
+
+      <div class="col-md-8">
+        <div class="card-body">
+
+          <div class="d-inline-flex align-items-baseline">
+            <a (click)="openUserPage(userObj?.login)"><h4  class="card-title">{{userObj?.name}}</h4></a>
+            <h6 class="card-title color-muted mx-4">{{userObj?.login}}</h6>
+          </div>
+
+          <p class="color-muted">{{userObj?.bio}}</p>
+
+          <div class="card-group ">
+            <p *ngIf="userObj?.location!=null" class="card-text color-muted"><i class="bi bi-geo-alt-fill"></i><span class="mx-1">{{userObj?.location}}</span>
+            </p>
+            <p *ngIf="userObj?.company!=null" class="card-text color-muted mx-5"><i class="bi bi-building"></i><span class="mx-1">{{userObj?.company}}</span>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>

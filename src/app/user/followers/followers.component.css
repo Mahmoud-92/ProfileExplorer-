@@ -2,42 +2,10 @@
     margin-top: 70px;
 }
 
-.list-group-item{
-    border: none;
-    max-height: 240px;
-    width: 750px;
-}
-
-.img-fluid{
-    border-radius: 50%;
-}
-
-i{
-    color:rgb(155, 155, 155);
-}
-
-.card-body{
-    width: 600px;
-}
-
-
-.col-md-4{
-    width: 20%;
-}
-
-.color-muted{
-    color: darkgrey;
-}
-
 .list-of-items{
     height: 800px;
     overflow: scroll;
     width: fit-content;
-}
-
-a:hover{
-    color: dodgerblue;
-    cursor: pointer;
 }
 
 

@@ -1,6 +1,5 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FetchService } from '../fetch.service';
 
 
@@ -31,7 +30,7 @@ export class UserComponent implements OnInit {
     if (this.localData) {
       this.storedData = JSON.parse(this.localData);
     }
-
+    this.storedData?.login && this.recieveLogin.fetchLogin(this.storedData?.login)
     /* Calling Data from API */
     this.fetchData();
 

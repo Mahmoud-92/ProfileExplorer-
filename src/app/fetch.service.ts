@@ -17,13 +17,12 @@ export class FetchService {
    }
 
 
-   fetchUser(){
-    return this.http.get('https://api.github.com/users/'+this.login)
+   fetchUser(loginValue?:string){
+     console.log("this.login",this.login)
+     console.log("this.loginValue",loginValue)
 
-   }
+    return this.http.get('https://api.github.com/users/'+(loginValue || this.login))
 
-   fetchFollowerObj(userLogin:string){
-     return this.http.get('https://api.github.com/users/'+userLogin)
    }
 
    fetchFollowing(){

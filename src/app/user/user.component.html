@@ -3,22 +3,22 @@
 
         <div class="col col-lg-2">
             <div class="card mt-5 ">
-                <img src={{storedData.avatar_url}} class="card-img-top">
+                <img src={{storedData?.avatar_url}} class="card-img-top">
                 <div class="card-body">
-                    <h2 class="card-title"><b>{{storedData.name}}</b></h2>
-                    <h4 class="card-text">{{storedData.login}}</h4>
+                    <h2 class="card-title"><b>{{storedData?.name}}</b></h2>
+                    <h4 class="card-text">{{storedData?.login}}</h4>
                 </div>
                 
                 <ul class="list-group list-group-flush">
-                    <li *ngIf="storedData.bio!=null" class="list-group-item">{{storedData.bio}}</li>
-                    <li *ngIf="storedData.location!=null" class="list-group-item"><i class="bi bi-geo-alt-fill"></i><span class="mx-1">{{storedData.location}}</span></li>
-                    <li *ngIf="storedData.company!=null" class="list-group-item"><i class="bi bi-building"></i><span class="mx-1">{{storedData.company}}</span></li>
-                    <li *ngIf="storedData.blog!=null" class="list-group-item"><i class="bi bi-link-45deg"></i><a id="blog" href={{storedData.blog}}><span class="mx-1">{{storedData.blog}}</span></a></li>
+                    <li *ngIf="storedData?.bio!=null" class="list-group-item">{{storedData?.bio}}</li>
+                    <li *ngIf="storedData?.location!=null" class="list-group-item"><i class="bi bi-geo-alt-fill"></i><span class="mx-1">{{storedData?.location}}</span></li>
+                    <li *ngIf="storedData?.company!=null" class="list-group-item"><i class="bi bi-building"></i><span class="mx-1">{{storedData?.company}}</span></li>
+                    <li *ngIf="storedData?.blog!=null" class="list-group-item"><i class="bi bi-link-45deg"></i><a id="blog" href={{storedData?.blog}}><span class="mx-1">{{storedData?.blog}}</span></a></li>
                 </ul>
                 <div class="card-body">
-                    <a  [routerLink]="['/user','followers']" class="card-link"><i class="bi bi-people"></i> <b>{{storedData.followers}}</b>
+                    <a  [routerLink]="['/user','followers']" class="card-link"><i class="bi bi-people"></i> <b>{{storedData?.followers}}</b>
                         Followers</a>
-                    <a  [routerLink]="['/user','following']" class="card-link"><i class="bi bi-people"></i> <b>{{storedData.following}}</b>
+                    <a  [routerLink]="['/user','following']" class="card-link"><i class="bi bi-people"></i> <b>{{storedData?.following}}</b>
                         Following</a>
                 </div>
             </div>

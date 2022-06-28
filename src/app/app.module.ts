@@ -10,6 +10,7 @@ import { FollowersComponent } from './user/followers/followers.component';
 import { FollowingComponent } from './user/following/following.component';
 import { FormsModule } from '@angular/forms'
 import { RouterModule, Routes } from '@angular/router';
+import { ListCardComponent } from './user/list-card/list-card.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -28,7 +29,8 @@ const appRoutes: Routes = [
     HomeComponent,
     UserComponent,
     FollowersComponent,
-    FollowingComponent
+    FollowingComponent,
+    ListCardComponent
   ],
   imports: [
     BrowserModule,
