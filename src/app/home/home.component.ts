@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FetchService } from '../fetch.service';
+
+
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,7 @@ export class HomeComponent implements OnInit {
   
   login:string;
 
-  constructor(private router: Router, private sendLogin:FetchService) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
 
@@ -21,13 +22,7 @@ export class HomeComponent implements OnInit {
   sendLoginName(){
 
     /* Navigating to User Component  */
-
-    this.router.navigate(['/user']);
-
-    /* Sending input data to User component via FetchService */ 
-
-    this.sendLogin.fetchLogin(this.login);
-
+    this.router.navigate(['/user', this.login]);
 
 
   }

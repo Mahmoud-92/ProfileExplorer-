@@ -16,9 +16,9 @@
                     <li *ngIf="storedData?.blog!=null" class="list-group-item"><i class="bi bi-link-45deg"></i><a id="blog" href={{storedData?.blog}}><span class="mx-1">{{storedData?.blog}}</span></a></li>
                 </ul>
                 <div class="card-body">
-                    <a  [routerLink]="['/user','followers']" class="card-link"><i class="bi bi-people"></i> <b>{{storedData?.followers}}</b>
+                    <a  [routerLink]="['/user',storedData?.login,'followers']" class="card-link"><i class="bi bi-people"></i> <b>{{storedData?.followers}}</b>
                         Followers</a>
-                    <a  [routerLink]="['/user','following']" class="card-link"><i class="bi bi-people"></i> <b>{{storedData?.following}}</b>
+                    <a  [routerLink]="['/user',storedData?.login,'following']" class="card-link"><i class="bi bi-people"></i> <b>{{storedData?.following}}</b>
                         Following</a>
                 </div>
             </div>

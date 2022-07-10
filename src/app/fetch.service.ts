@@ -6,30 +6,23 @@ import { Injectable } from '@angular/core';
 })
 export class FetchService {
 
-   login:string;
+   
 
   constructor(private http:HttpClient) {
     
    }
 
-   fetchLogin(loginUser:string){
-     this.login= loginUser;
-   }
-
 
    fetchUser(loginValue?:string){
-     console.log("this.login",this.login)
-     console.log("this.loginValue",loginValue)
-
-    return this.http.get('https://api.github.com/users/'+(loginValue || this.login))
-
+    return this.http.get('https://api.github.com/users/'+(loginValue))
    }
 
-   fetchFollowing(){
-     return this.http.get('https://api.github.com/users/'+this.login+'/following')
+   fetchFollowing(user:string){
+     return this.http.get('https://api.github.com/users/'+user+'/following')
    }
-   fetchFollowers(){
-     return this.http.get('https://api.github.com/users/'+this.login+'/followers')
+
+   fetchFollowers(user:string){
+     return this.http.get('https://api.github.com/users/'+user+'/followers')
    }
 
 

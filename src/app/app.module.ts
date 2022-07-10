@@ -15,7 +15,7 @@ import { ListCardComponent } from './user/list-card/list-card.component';
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   {
-    path: 'user', component: UserComponent, children: [
+    path: 'user/:login', component: UserComponent, children: [
       { path: 'followers', component: FollowersComponent },
       { path: 'following', component: FollowingComponent }
     ]

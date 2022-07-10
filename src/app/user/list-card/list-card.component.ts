@@ -9,30 +9,28 @@ import { FetchService } from 'src/app/fetch.service';
 })
 export class ListCardComponent implements OnInit {
   /* Receiving login property from ngFor*/
-  @Input() userLogin:any;
+  @Input() userLogin: any;
 
   userObj;
 
-  constructor(private router:Router, private fetchData:FetchService) { }
+  constructor(private router: Router, private fetchData: FetchService) { }
 
   ngOnInit(): void {
-    
+
     this.fetchUserData();
 
   }
 
-  openUserPage(userLogin:string){
-    /* Empty Local Storage */ 
+  openUserPage(userLogin: string) {
+    /* Empty Local Storage */
     localStorage.clear();
-    /* Go to user component */ 
-    this.router.navigate(['/user']);
-    /* Sending user data to User component via FetchService */ 
-    this.fetchData.fetchLogin(userLogin);
+    /* Go to user component */
+    this.router.navigate(['/user', userLogin]);
 
   }
 
-  fetchUserData(){
-    this.fetchData.fetchUser(this.userLogin).subscribe(data=>this.userObj=data)
+  fetchUserData() {
+    this.fetchData.fetchUser(this.userLogin).subscribe(data => this.userObj = data)
   }
 
 }
